@@ -1,0 +1,56 @@
+" Default colour scheme
+colorscheme SharpLight
+
+" Default font
+set guifont=Courier_New:h10
+
+" Hide the Toolbar
+set guioptions-=T
+
+" Status bar options
+set showmode
+set showcmd
+set ruler
+
+" Word wrapping for all files but .txt
+set nowrap
+autocmd BufRead *.txt setlocal wrap
+
+" Show line numbers for all files but .txt
+set nu
+autocmd BufRead *.txt setlocal nonu
+
+" Fix default tabs
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+autocmd BufRead *.txt,*.html,*.xml setlocal noexpandtab
+
+" Backspace deletes everything
+set backspace=indent,eol,start
+
+" Fix utf-8 encoding
+if has("multi_byte")
+    if &termencoding==""
+        let &termencoding=&encoding
+    endif
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+endif
+
+" Make whitespace visible in some cases
+set list
+set listchars=tab:>.,trail:.,nbsp:.,precedes:«,extends:»
+autocmd BufRead *.txt,*.html,*.xml setlocal listchars=tab:\ \ 
+
+" Hides buffers instead of closing them
+set hidden
+
+" Don't write backup files
+set nobackup
+set noswapfile
+
+" Add syntax highlighting for MetaTrader files
+autocmd BufRead,BufNewFile *.mql,*.mqh,*.mq4,*.mq5 setlocal filetype=cs
