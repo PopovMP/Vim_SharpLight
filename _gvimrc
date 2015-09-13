@@ -1,3 +1,6 @@
+" Run Pathogen plugin
+" execute pathogen#infect()
+
 " Default colour scheme
 colorscheme SharpLight
 
@@ -53,4 +56,21 @@ set nobackup
 set noswapfile
 
 " Add syntax highlighting for MetaTrader files
+set laststatus=2
 autocmd BufRead,BufNewFile *.mql,*.mqh,*.mq4,*.mq5 setlocal filetype=cs
+
+" Formats the statusline
+set statusline=\ %f                             " file name
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+set statusline+=%{&ff}]             " file format
+set statusline+=%y                  " filetype
+set statusline+=%h                  " help file flag
+set statusline+=%m                  " modified flag
+set statusline+=%r                  " read only flag
+set statusline+=\ %=                " align left
+set statusline+=Line:%l/%L[%p%%]    " line X of Y [percent of file]
+set statusline+=\ Col:%c            " current column
+set statusline+=\ Buf:%n\           " Buffer number
+
+au InsertEnter * hi statusline guifg=#ffffff guibg=#e6935c
+au InsertLeave * hi statusline guifg=#ffffff guibg=#909090

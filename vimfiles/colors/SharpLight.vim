@@ -21,10 +21,10 @@ hi Title        guifg=#202020                   gui=bold
 hi Underlined   guifg=#202020                   gui=underline
 hi Cursor       guifg=#000000   guibg=#b0b4b8
 hi lCursor      guifg=#000000   guibg=#ffffff
-hi LineNr       guifg=#2b91af   guibg=#fdfdfd
-hi StatusLine   guifg=#ffffff   guibg=#8090a0   gui=bold,italic
-hi StatusLineNC guifg=#506070   guibg=#a0b0c0   gui=italic
-hi VertSplit    guifg=#a0b0c0   guibg=#a0b0c0
+hi LineNr       guifg=#2b91af   guibg=#f0f0f0
+hi StatusLine   guifg=#ffffff   guibg=#909090   gui=none
+hi StatusLineNC guifg=#606060   guibg=#d0d0d0   gui=none
+hi VertSplit    guifg=#d0d0d0   guibg=#d0d0d0   gui=none
 hi Folded       guifg=#000000   guibg=#dfdfdf
 hi NonText      guifg=#0000ff
 
