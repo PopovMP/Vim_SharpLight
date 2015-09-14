@@ -1,3 +1,7 @@
+" SharpLight teme
+" Miroslav Popov
+" http://forexsb.com
+
 set background=light
 
 hi clear
